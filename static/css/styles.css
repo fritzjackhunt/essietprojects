@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+.pull-right {
+    float: right;
+}
+
+#text {
+    margin-top: 70px;
+}
