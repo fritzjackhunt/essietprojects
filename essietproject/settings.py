@@ -22,7 +22,7 @@ PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'essietproject/static/js', 'ser
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'z9dna5+0s$=#^92!^26)#f8^gfgzd&3m6^&0#*d_&_gzo4f2ro'
+SECRET_KEY = 'Nice try'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
