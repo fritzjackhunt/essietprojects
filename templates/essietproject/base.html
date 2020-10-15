@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+{% load static %}
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,27 +13,34 @@
 
   
     <title>Essiet, LLC</title>
-    <!-- Add additional CSS in static file -->
+
+    <!-- Add additional js in static file -->
     {% load static %}
+    <link rel="stylesheet" href="text/javascript" href="{% static 'js/jquerry.js' %}">
+    
+    <!-- Add additional CSS in static file -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 </head>
 <body>
 
     <!-- Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
         <a class="navbar-brand" href="#">essiet</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
+        
       
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse bg-transparent" id="navbarNavDropdown">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contacts</a>
+              <a class="nav-link" href="{% static 'essietproject/contacts.html' %">Contacts</a>
             </li>
+         
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Company
@@ -41,17 +50,128 @@
                 </div>
             </li>
           </ul>
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sign in</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sign up</a>
+            </li>
+            </li>
+          </ul>
         </div>
     </nav>
 
-    <div class="container-fluid" id="text">
+    <!--navbar ends-->
 
-
-        Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile devices, desktops/laptops, or other type of compatible computer. Text messages may be sent over a cellular network, or may also be sent via an Internet connection.
-
-T
-Text messages are used for personal, family, business and social purposes. Governmental and non-governmental organizations use text messaging for communication between colleagues. In the 2010s, the sending of short informal messages has become an accepted part of many cultures, as happened earlier with emailing.[1] This makes texting a quick and easy way to communicate with friends, family and colleagues, including in contexts where a call would be impolite or inappropriate (e.g., calling very late at night or when one knows the other person is busy with family or work activities). Like e-mail and voicemail and unlike calls (in which the caller hopes to speak directly with the recipient), texting does not require the caller and recipient to both be free at the same moment; this permits communication even between busy individuals. Text messages can also be used to interact with automated systems, for example, to order products or services from e-commerce websites, or to participate in online contests. Advertisers and service providers use direct text marketing to send messages to mobile users about promotions, payment due dates, and other notifications instead of using postal mail, email, or voicemail. 
+    <!--jumbotron-->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+       <div class="row">
+          <div class="col-lg-6">
+            <h1 class="display-4">Digital Marketing simply at it's best!</h1>
+            <p class="lead">Paving the road to your brand succes through SEO and digital marketing</p>
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Create free account</a>
+         </div>
+         
+         <div class="row">
+            <div class="col-lg-6">
+              <img src="{% static 'pictures\image6.png' %}" height="400" width="500" alt="Seo">
+            </div>
+         </div>
+        </div>
+      </div>
     </div>
+    <!--jumbotron ends-->
+
+{% load static %}
+    <div class="jumbotron" id="j2">
+      <body class="inner" style="background-image: url('{% static '/pictures/pme3.jpg' %}')";>
+        <h1 class="display-4">Hello, world!</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </body>
+    </div>
+
+
+    <!--About us starts-->
+
+    <div class="container">
+      <h2 id="aboutus">About Us</h2>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h3 class="featurette-heading">Passionate Marketing Experts.</h2>
+        <p class="lead">We aim to help bussiness create their brand prescense and achieve their goals. Our process is designed to epower your brand and outfit your bussiness with the marketing tools needed to succed. Talk to us today about how we can support your growthm limit your turnover, and put you on a solid track to success and profit</p>
+      </div>
+      <div class="col-md-5">
+        <img src="{% static 'pictures\pme.jpg' %}" width="500" height="500" alt="Generic placeholder image">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 col-md-push-5">
+        <h3 class="featurette-heading">Our Analytical Approach.</h2>
+        <p class="lead">Our services includes a comprehensive consult to help identify gaps and opportunitiesm, and results in a comprehensive report that includes a project plan with timelines and cost analysis. Our individula plans are made up of quality services that will help you get there quickly and smoothly</p>
+      </div>
+      <div id="pix" class="col-md-5 col-md-pull-7">
+        <img src="{% static 'pictures\pme3.jpg' %}" height="500" width="500" alt="Generic placeholder image">
+      </div>
+    </div>
+
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE ABOUT US -->
+
+
+    <!-- START SERVICES-->
+    <div id="main-content" class="container">
+      <div id="menus" class="row">
+        <div class="col-xl-4">
+         <div id="sub-title"><span>Chicken</span></div>
+         <span>Good morning. Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile devices, desktops/laptops, or other type of compatible computer.</span>
+        </div>
+      
+            <div class="col-xl-4">
+              <div id="sub-title1"><span>Beef</span></div>
+              <span>Good morning. Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile devices, desktops/laptops, or other type of compatible computer.</span>
+            </div>
+
+            <div class="col-xl-4">
+              <div id="sub-title2"><span>Sushi</span></div>
+              <span>Good morning. Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile devices, desktops/laptops, or other type of compatible computer.</span>
+            </div>
+
+            <div class="col-xl-4">
+              <div id="sub-title1"><span>Beef</span></div>
+              <span>Good morning. Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile devices, desktops/laptops, or other type of compatible computer.</span>
+            </div>
+
+            <div class="col-xl-4">
+              <div id="sub-title2"><span>Sushi</span></div>
+              <span>Good morning. Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile devices, desktops/laptops, or other type of compatible computer.</span>
+            </div>
+
+            <div class="col-xl-4">
+              <div id="sub-title2"><span>Sushi</span></div>
+              <span>Good morning. Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile devices, desktops/laptops, or other type of compatible computer.</span>
+            </div>
+        </div>
+    </div>
+   
+    <!--END SERVICES-->
+
+    
+    <!---->
 
 
     <hr class="featurette-divider">

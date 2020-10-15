@@ -9,3 +9,6 @@ import json
 
 def home(request):
     return render(request, 'essietproject/base.html')
+
+def contacts(request):
+    return render(request, 'essietproject/contacts.html')
