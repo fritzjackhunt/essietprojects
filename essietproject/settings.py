@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pwa',
     'essiet',
+    'mailchimp',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +127,8 @@ STATIC_ROOT = '/essietprojects/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
+
+# Mailchimp API 
+MAILCHIMP_API_KEY = '92ef2aef156b6b5e2cd8e22076f9d21a-us4' 
+MAILCHIMP_DATA_CEMTER = 'us4'
+MAILCHIM_EMAIL_LIST_ID = '8c3315582f'

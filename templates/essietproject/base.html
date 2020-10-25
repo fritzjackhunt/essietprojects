@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/6d3cd5f68394730c15c47bd9e/c76e71c6e988f4195bfb9f12b.js");</script>
   
     <title>Essiet, LLC</title>
 
@@ -69,10 +69,10 @@
       <div class="container">
        <div class="row">
           <div class="col-lg-6">
-            <h1 class="display-4">Digital Marketing simply at it's best!</h1>
-            <p class="lead">Paving the road to your brand succes through SEO and digital marketing</p>
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Create free account</a>
+            <h1 class="display-4" id="jumbo-header">The Platform For Clients. The Home Of Freelancers.</h1>
+            <p class="lead">Get the most, at least.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Client</a>
+            <a class="btn btn-light btn-lg" href="#" role="button">Freelancer</a>
          </div>
          
          <div class="row">
@@ -85,18 +85,8 @@
     </div>
     <!--jumbotron ends-->
 
-{% load static %}
-    <div class="jumbotron" id="j2">
-      <body class="inner" style="background-image: url('{% static '/pictures/pme3.jpg' %}')";>
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-      </body>
-    </div>
-
-
+    <!--<body class="inner" style="background-image: url('{% static '/pictures/pme3.jpg' %}')";>-->
+        
     <!--About us starts-->
 
     <div class="container">
@@ -118,12 +108,12 @@
     <hr class="featurette-divider">
 
     <div class="row featurette">
+      <div id="pix" class="col-md-5 col-md-pull-7">
+        <img src="{% static 'pictures\pme3.jpg' %}" height="500" width="500" alt="Generic placeholder image">
+      </div>
       <div class="col-md-7 col-md-push-5">
         <h3 class="featurette-heading">Our Analytical Approach.</h2>
         <p class="lead">Our services includes a comprehensive consult to help identify gaps and opportunitiesm, and results in a comprehensive report that includes a project plan with timelines and cost analysis. Our individula plans are made up of quality services that will help you get there quickly and smoothly</p>
-      </div>
-      <div id="pix" class="col-md-5 col-md-pull-7">
-        <img src="{% static 'pictures\pme3.jpg' %}" height="500" width="500" alt="Generic placeholder image">
       </div>
     </div>
 
@@ -171,6 +161,16 @@
     <!--END SERVICES-->
 
     
+
+    <div class = "subscribe_form">
+      <p>Sign up for our newsletter to get latest updates</p>
+      <form id = "subscribe" form method = 'POST'>{% csrf_token %}
+          <input id = "email_id" type = "email" name = "email_id" placeholder="your@email.com">
+          <button type="submit" value = "Subscribe" id = "email_submit">Subscribe</button>
+      </form>
+    </div>
+
+
     <!---->
 
 

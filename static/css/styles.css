@@ -10,10 +10,8 @@
     margin-top: 70px;
 }
 
-#j2 {
-    background-image: url('/static/pictures/pme1.jpg');
-    background-repeat: no-repeat;
-
+#jumbo-header {
+    font-family: 'Times New Roman', Times, serif;
 }
 
 #main-content {
