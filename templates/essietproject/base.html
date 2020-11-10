@@ -86,7 +86,40 @@
     <!--jumbotron ends-->
 
     <!--<body class="inner" style="background-image: url('{% static '/pictures/pme3.jpg' %}')";>-->
-        
+    
+      <section class="newsletter no-padding-top">    
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h2>Subscribe to Newsletter</h2>
+              <p class="text-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="col-md-8">
+              <div class="form-holder">
+                
+                  {% csrf_token %}
+                  <div class="form-group">
+                      {{ form }}
+                      <button type="submit" class="submit">Signup</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> 
+      
+
+    <div class = "subscribe_form">
+      <p>Sign up for our newsletter to get latest updates</p>
+      <form id = "subscribe" form method = 'POST'>{% csrf_token %}
+          <input id = "email_id" type = "email" name = "email_id" placeholder="your@email.com">
+      <button onclick="location.href='{% url 'subscribe' %}'" type="submit" value = "Subscribe" id = "email_submit">Subscribe</button>
+      </form>
+    </div>
+      
+
+    
     <!--About us starts-->
 
     <div class="container">
@@ -101,15 +134,15 @@
         <p class="lead">We aim to help bussiness create their brand prescense and achieve their goals. Our process is designed to epower your brand and outfit your bussiness with the marketing tools needed to succed. Talk to us today about how we can support your growthm limit your turnover, and put you on a solid track to success and profit</p>
       </div>
       <div class="col-md-5">
-        <img src="{% static 'pictures\pme.jpg' %}" width="500" height="500" alt="Generic placeholder image">
+        <img src="{% static 'pictures\pme.jpg' %}" width="200" height="200" alt="Generic placeholder image">
       </div>
     </div>
 
     <hr class="featurette-divider">
 
     <div class="row featurette">
-      <div id="pix" class="col-md-5 col-md-pull-7">
-        <img src="{% static 'pictures\pme3.jpg' %}" height="500" width="500" alt="Generic placeholder image">
+      <div id="pix" class="col-md-3 col-md-pull-7">
+        <img src="{% static 'pictures\pme3.jpg' %}" height="200" width="200" alt="Generic placeholder image">
       </div>
       <div class="col-md-7 col-md-push-5">
         <h3 class="featurette-heading">Our Analytical Approach.</h2>
@@ -162,13 +195,7 @@
 
     
 
-    <div class = "subscribe_form">
-      <p>Sign up for our newsletter to get latest updates</p>
-      <form id = "subscribe" form method = 'POST'>{% csrf_token %}
-          <input id = "email_id" type = "email" name = "email_id" placeholder="your@email.com">
-          <button type="submit" value = "Subscribe" id = "email_submit">Subscribe</button>
-      </form>
-    </div>
+    
 
 
     <!---->
