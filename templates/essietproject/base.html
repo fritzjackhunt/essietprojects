@@ -38,7 +38,7 @@
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% static 'essietproject/contacts.html' %">Contacts</a>
+              <a class="nav-link" href="{% url 'contacts' %}">Contacts</a>
             </li>
          
             <li class="nav-item dropdown">
@@ -46,7 +46,7 @@
                 Company
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">About Us</a>
+                    <a class="dropdown-item" href="{% url 'aboutus' %}">About Us</a>
                 </div>
             </li>
           </ul>
@@ -87,37 +87,14 @@
 
     <!--<body class="inner" style="background-image: url('{% static '/pictures/pme3.jpg' %}')";>-->
     
-      <section class="newsletter no-padding-top">    
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <h2>Subscribe to Newsletter</h2>
-              <p class="text-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <div class="col-md-8">
-              <div class="form-holder">
-                
-                  {% csrf_token %}
-                  <div class="form-group">
-                      {{ form }}
-                      <button type="submit" class="submit">Signup</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
-      </section> 
-      
-
-    <div class = "subscribe_form">
-      <p>Sign up for our newsletter to get latest updates</p>
-      <form id = "subscribe" form method = 'POST'>{% csrf_token %}
-          <input id = "email_id" type = "email" name = "email_id" placeholder="your@email.com">
-      <button onclick="location.href='{% url 'subscribe' %}'" type="submit" value = "Subscribe" id = "email_submit">Subscribe</button>
+        <button type="submit" href="{% url 'subscribe' %}" class="btn btn-primary">Submit</button>
       </form>
-    </div>
-      
 
     
     <!--About us starts-->

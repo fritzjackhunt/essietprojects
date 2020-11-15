@@ -19,3 +19,5 @@ def home(request):
 def contacts(request):
     return render(request, 'essietproject/contacts.html')
 
+def aboutus(request):
+    return render(request, 'essietproject/company/aboutus.html')

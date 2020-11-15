@@ -21,7 +21,6 @@ from marketing import views
 urlpatterns = [
     path('essiet/', include('essiet.urls')),
     path('admin/', admin.site.urls),
-    path('', views.home)
-    path('marketing', views.subscribe),
-     
+    path('marketing', views.subscribe, name='subscribe'),
+    #path('contacts', views.contacts, name='contacts'),
 ]
