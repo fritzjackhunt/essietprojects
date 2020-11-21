@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'pwa',
     
     'essiet',
-    'marketing'
+    'marketing',
+    'payments',
 ]
 
 MIDDLEWARE = [

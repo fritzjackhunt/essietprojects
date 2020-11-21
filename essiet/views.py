@@ -21,6 +21,3 @@ def contacts(request):
 
 def aboutus(request):
     return render(request, 'essietproject/company/aboutus.html')
-
-def payments(request):
-    return render(request, 'essietproject/stripe/checkout.html')

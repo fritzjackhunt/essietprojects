@@ -31,7 +31,7 @@ def subscribe(email):
         data=serializers.serialize(data, data)
     )
     return r.status_code, r.json()
-    return render(email, 'marketing/subscribed.html')
+    return render(email, 'essietproject/marketing/subscribed.html')
 
 
 def email_list_signup(request):
