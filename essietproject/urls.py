@@ -19,8 +19,7 @@ from essiet import views
 from marketing import views
 
 urlpatterns = [
-    path('essiet/', include('essiet.urls')),
+    path('', include('essiet.urls')),
     path('admin/', admin.site.urls),
-    path('marketing', views.subscribe, name='subscribe'),
-    #path('contacts', views.contacts, name='contacts'),
+    path('marketing', include('marketing.urls')),
 ]
