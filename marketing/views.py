@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from .forms import EmailSignupForm
 from .models import Signup
+from django.core import serializers
 
 import json
 import requests
@@ -22,14 +23,15 @@ members_endpoint = '{api_url}/lists/{list_id}/members'.format(
 def subscribe(email):
     data = {
         "email_address": email,
-        "status": "subscribed"
+        "status": "subscribed",
     }
     r = requests.post(
         members_endpoint,
         auth=("", MAILCHIMP_API_KEY),
-        data=json.dumps(data)
+        data=serializers.serialize(data, data)
     )
     return r.status_code, r.json()
+    return render(email, 'marketing/subscribed.html')
 
 
 def email_list_signup(request):
