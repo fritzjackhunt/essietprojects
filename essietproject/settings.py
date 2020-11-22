@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'essiet',
     'marketing',
     'payments',
+    'paypal',
 ]
 
 MIDDLEWARE = [
