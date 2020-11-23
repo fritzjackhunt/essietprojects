@@ -24,4 +24,5 @@ urlpatterns = [
     path('marketing', include('marketing.urls')),
     path('payments', include('payments.urls')),
     path('paypal', include('paypal.urls')),
+    path('pwa', include('pwa.urls')),
 ]

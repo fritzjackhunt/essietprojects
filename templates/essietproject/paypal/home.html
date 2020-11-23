@@ -9,11 +9,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
   <!-- JavaScript SDK -->
-  <script src="https://www.paypal.com/sdk/js?components=hosted-fields,buttons&client-id=<AZjZlvF_LSiijNIFLpak3XoUX2HoK76aRyuf0sj-46iyQKqzxmzeFfXhA7t4Ll1HXf68VaBdzhpVFGq3>" data-client-token="<YOUR-CLIENT-TOKEN>"></script>
+  <script src="https://www.paypal.com/sdk/js?components=hosted-fields,buttons&client-id=<YOUR-CLIENT-ID>" data-client-token="<YOUR-CLIENT-TOKEN>"></script>
 
   {% load static %}
   <link rel="stylesheet" type="text/css" href="{% static 'css/cardfields.css' %}">
-
+  <link rel="stylesheet" type="application/javaScript" href="{% static 'js/paypal.js' %}">
 </head>
 <body>
 
@@ -23,7 +23,7 @@
        <td colspan="2">
          <div id="paypal-button-container"></div>
        </td>
-     </tr>
+      </tr>
      <tr><td colspan="2">&nbsp;</td></tr>
    </table>
 
