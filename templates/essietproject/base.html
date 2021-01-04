@@ -1,7 +1,7 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
-
-{% load static %}
 
 <head>
     <meta charset="UTF-8">
@@ -16,18 +16,19 @@
 
     <!-- Add additional js in static file -->
     {% load static %}
-    <link rel="stylesheet" type="application/javascript" href="{% static 'js/jquerry.js' %}">
+    <link rel="stylesheet" type="application/javascript" href="{% static 'js/client.js' %}">
     
-    <link rel="stylesheet" type="application/javascript" href="{% static 'js/serviceworker/js' %}">
+    <link rel="stylesheet" type="application/javascript" href="{% static 'js/paypal.js' %}">
 
     <!-- Add additional CSS in static file -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    
 </head>
 <body>
 
     <!-- Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-        <a class="navbar-brand" href="#">essiet</a>
+        <a class="navbar-brand" href="{% url 'homepage' %}">essiet</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -37,7 +38,7 @@
         <div class="collapse navbar-collapse bg-transparent" id="navbarNavDropdown">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{% url 'homepage' %}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'contacts' %}">Contacts</a>
@@ -67,123 +68,12 @@
     </nav>
 
     <!--navbar ends-->
-
-    <!--jumbotron-->
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-       <div class="row">
-          <div class="col-lg-6">
-            <h1 class="display-4" id="jumbo-header">The Platform For Clients. The Home Of Freelancers.</h1>
-            <p class="lead">Get the most, at least.</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Client</a>
-            <a class="btn btn-light btn-lg" href="#" role="button">Freelancer</a>
-         </div>
-         
-         <div class="row">
-            <div class="col-lg-6">
-              <img src="{% static 'pictures\image6.png' %}" height="400" width="500" alt="Seo">
-            </div>
-         </div>
-        </div>
-      </div>
-    </div>
-    <!--jumbotron ends-->
-
-    <!--<body class="inner" style="background-image: url('{% static '/pictures/pme3.jpg' %}')";>-->
     
-      <form action="{% url 'subscribe' %}" method="post">
-        {% csrf_token %}
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email submit" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <button type="submit" href="{% url 'subscribe' %}" class="btn btn-primary">Submit</button>
-      </form>
-
-    
-    <!--About us starts-->
-
-    <div class="container">
-      <h2 id="aboutus">About Us</h2>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h3 class="featurette-heading">Passionate Marketing Experts.</h2>
-        <p class="lead">We aim to help bussiness create their brand prescense and achieve their goals. Our process is designed to epower your brand and outfit your bussiness with the marketing tools needed to succed. Talk to us today about how we can support your growthm limit your turnover, and put you on a solid track to success and profit</p>
-      </div>
-      <div class="col-md-5">
-        <img src="{% static 'pictures\pme.jpg' %}" width="200" height="200" alt="Generic placeholder image">
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div id="pix" class="col-md-3 col-md-pull-7">
-        <img src="{% static 'pictures\pme3.jpg' %}" height="200" width="200" alt="Generic placeholder image">
-      </div>
-      <div class="col-md-7 col-md-push-5">
-        <h3 class="featurette-heading">Our Analytical Approach.</h2>
-        <p class="lead">Our services includes a comprehensive consult to help identify gaps and opportunitiesm, and results in a comprehensive report that includes a project plan with timelines and cost analysis. Our individula plans are made up of quality services that will help you get there quickly and smoothly</p>
-      </div>
-    </div>
+{% block content %}
 
 
-    <hr class="featurette-divider">
+{% endblock %}
 
-    <!-- /END THE ABOUT US -->
-
-
-    <!-- START SERVICES-->
-    <div id="main-content" class="container">
-      <div id="menus" class="row">
-        <div class="col-xl-4">
-         <div id="sub-title"><span>Chicken</span></div>
-         <span>Good morning. Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile devices, desktops/laptops, or other type of compatible computer.</span>
-        </div>
-      
-            <div class="col-xl-4">
-              <div id="sub-title1"><span>Beef</span></div>
-              <span>Good morning. Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile devices, desktops/laptops, or other type of compatible computer.</span>
-            </div>
-
-            <div class="col-xl-4">
-              <div id="sub-title2"><span>Sushi</span></div>
-              <span>Good morning. Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile devices, desktops/laptops, or other type of compatible computer.</span>
-            </div>
-
-            <div class="col-xl-4">
-              <div id="sub-title1"><span>Beef</span></div>
-              <span>Good morning. Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile devices, desktops/laptops, or other type of compatible computer.</span>
-            </div>
-
-            <div class="col-xl-4">
-              <div id="sub-title2"><span>Sushi</span></div>
-              <span>Good morning. Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile devices, desktops/laptops, or other type of compatible computer.</span>
-            </div>
-
-            <div class="col-xl-4">
-              <div id="sub-title2"><span>Sushi</span></div>
-              <span>Good morning. Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile devices, desktops/laptops, or other type of compatible computer.</span>
-            </div>
-        </div>
-    </div>
-   
-    <!--END SERVICES-->
-
-    
-
-    
-
-
-    <!---->
-
-
-    <hr class="featurette-divider">
 
     <!--Footer-->
     <footer class="page-footer">
@@ -192,8 +82,3 @@
             <p>&copy; 2020 essiet 
         </div>
     </footer>
-
-</body>
-</html>
-
-

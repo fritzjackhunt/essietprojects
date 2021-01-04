@@ -2,4 +2,4 @@ from django.shortcuts import render
 
 # Create your views here.
 def home(request):
-    return render(request, 'essietproject/paypal/home.html')
+    return render(request, 'essietproject/paypal/paypal.html')

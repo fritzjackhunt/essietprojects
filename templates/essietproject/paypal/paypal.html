@@ -1,21 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
+{% extends 'essietproject\base.html' %}
 {% load static %}
 
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Optimal rendering on mobile devices. -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-  <!-- JavaScript SDK -->
-  <script src="https://www.paypal.com/sdk/js?components=hosted-fields,buttons&client-id=<YOUR-CLIENT-ID>" data-client-token="<YOUR-CLIENT-TOKEN>"></script>
+{% block content %}
 
-  {% load static %}
-  <link rel="stylesheet" type="text/css" href="{% static 'css/cardfields.css' %}">
-  <link rel="stylesheet" type="application/javaScript" href="{% static 'js/paypal.js' %}">
-</head>
-<body>
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/cardfields.css' %}">
 
    <!-- Buttons container -->
    <table border="0" align="center" valign="top" bgcolor="#FFFFFF" style="width:39%">
@@ -68,3 +58,5 @@
 
    </body>
    </html>
+
+{% endblock %}

@@ -14,7 +14,7 @@ from marketing.models import Signup
 
 
 def home(request):
-    return render(request, 'essietproject/base.html')
+    return render(request, 'essietproject/home.html')
 
 def contacts(request):
     return render(request, 'essietproject/contacts.html')
