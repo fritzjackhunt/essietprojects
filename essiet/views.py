@@ -23,18 +23,17 @@ def contacts(request):
         contact_email = request.POST['email']
         contact_message = request.POST['message']
 
-        return render(request, 'essietproject/contacts.html', {'contact_fname' : contact_fname})
-
         send_mail(
             contact_fname, 
-            contact_lname, 
-            contact_email,
             contact_message,
-            ['essiet.aniekan31@gmail.com']
-
+            contact_email,
+            ['essiet.aniekan31@gmail.com'],
+            fail_silently = False,
         )
 
-        
+
+        return render(request, 'essietproject/contacts.html', {'contact_fname' : contact_fname})
+
 
     else:
         return render(request, 'essietproject/contacts.html')
