@@ -17,11 +17,13 @@ def home(request):
     return render(request, 'essietproject/home.html')
 
 def contacts(request):
-    if request.method == 'POST':
+    if request.method == "POST":
         contact_fname = request.POST['fname']
         contact_lname = request.POST['lname']
         contact_email = request.POST['email']
         contact_message = request.POST['message']
+
+        return render(request, 'essietproject/contacts.html', {'contact_fname' : contact_fname})
 
         send_mail(
             contact_fname, 
@@ -32,7 +34,7 @@ def contacts(request):
 
         )
 
-        return render(request, 'essietproject/contacts.html', {'contact_fname' : contact_fname})
+        
 
     else:
         return render(request, 'essietproject/contacts.html')
