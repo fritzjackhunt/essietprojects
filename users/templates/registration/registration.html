@@ -1,0 +1,18 @@
+{% extends 'essietproject/base.html' %}
+{% load static %}
+{% block content %}
+
+<h1>Register an acount here.</h1>
+
+<div class="form-group">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button class="btn btn-secondary">Submit</button>
+        
+    </form>
+</div>
+
+
+
+{% endblock %}

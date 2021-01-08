@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'marketing',
     'payments',
     'paypal',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -146,3 +147,6 @@ EMAIL_PORT = '1025'
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = False
+
+LOGIN_REDIRECT_URL = 'homepage'
+LOGOUT_REDIRECT_URL = 'homepage'
