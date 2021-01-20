@@ -51,7 +51,20 @@ INSTALLED_APPS = [
     'payments',
     'paypal',
     'users',
+    
+    'django.contrib.sites',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
 ]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -153,9 +166,24 @@ EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = False
 
 LOGIN_REDIRECT_URL = 'homepage'
-LOGOUT_REDIRECT_URL = 'homepage'
+LOGOUT_REDIRECT_URL = '/'
 
 
 STATICFILES_STORAGE = 'whiteNoise.storage.CompressedManifestStaticFilesStorage'
 
 django_heroku.settings(locals())
+
+SITE_ID = 1
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        # For each OAuth based provider, either add a ``SocialApp``
+        # (``socialaccount`` app) containing the required client
+        # credentials, or list them here:
+        'APP': {
+            'client_id': '705779824338-p6rcpb76sccapbqk84n91kn3lgam7cd1.apps.googleusercontent.com',
+            'secret': 'HFmOs05ixO3nFntqo9Nrl4EH',
+            'key': ''
+        }
+    }
+}

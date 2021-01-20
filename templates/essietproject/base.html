@@ -37,9 +37,6 @@
       
         <div class="collapse navbar-collapse bg-transparent" id="navbarNavDropdown">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'homepage' %}">Home <span class="sr-only">(current)</span></a>
-            </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'contacts' %}">Contacts</a>
             </li>
@@ -71,7 +68,7 @@
           {% else %}
 
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'login' %}">Sign in</a>
+            <a class="nav-link" href="{% url 'account_login' %}">Sign in</a>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'register' %}">Sign up</a>
           
