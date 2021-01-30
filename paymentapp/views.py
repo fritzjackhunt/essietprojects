@@ -1,5 +1,9 @@
 from django.shortcuts import render
 
+from django.shortcuts import get_object_or_404, redirect
+from django.template.response import TemplateResponse
+from payments import get_payment_model, RedirectNeeded
+
 #! /usr/bin/env python3.6
 """
 Python 3.6 or newer required.
@@ -44,4 +48,12 @@ if __name__ == '__main__':
 
 
 def payments(request):
-    return render(request, 'essietproject/payments/checkout.html')
+    return render(request, 'essietproject/payments/payment.html')
+
+def payment_details(request, payment_id):
+    payment = get_object_or_404(get_payment_model(), id=payment_id)
+    try:
+        form = payment.get_form(data=request.POST or None)
+    except RedirectNeededasredirect_to:
+        returnredirect(str(redirect_to))
+    return TemplateResponse(request, 'payment.html',{'form': form, 'payment': payment})

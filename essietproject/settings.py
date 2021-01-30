@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'payments',
     'paypal',
     'users',
-    
+
     'django.contrib.sites',
 
     'allauth',
@@ -59,6 +59,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
 ]
+
+PAYPAL_TEST = True
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
@@ -213,3 +215,16 @@ SOCIALACCOUNT_PROVIDERS = {
         'VERSION': 'v7.0',
     }
 }
+
+
+PAYPAL_TEST = True
+#     PAYPAL_WPP_USER = "???"
+ #   PAYPAL_WPP_PASSWORD = "???"
+  #  PAYPAL_WPP_SIGNATURE = "???"
+
+PAYMENT_HOST = 'localhost:8000'
+PAYMENT_USES_SSL = False
+PAYMENT_MODEL = 'paymentapp.Payment'
+PAYMENT_VARIANTS = {
+    'default': ('payments.dummy.DummyProvider', {}
+    )}

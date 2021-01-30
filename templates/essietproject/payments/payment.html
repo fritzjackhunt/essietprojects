@@ -1,0 +1,12 @@
+{% extends 'essietproject\base.html' %}
+{% load static %}
+
+{% block content %}
+
+    
+<form action="{{ form.action }}" method="{{ form.method }}">
+    {% csrf_token %}{{ form.as_p }}
+    <p><inputtype="submit" value="Proceed" /></p>
+</form>
+
+{% endblock %}
