@@ -7,8 +7,6 @@ import json
 from django.http import HttpResponse, JsonResponse
 from .models import Subscribe
 from .utils import SendSubscribeMail
-from marketing.forms import EmailSignupForm
-from marketing.models import Signup
 from django.core.mail import send_mail
 
 

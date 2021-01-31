@@ -59,7 +59,6 @@ INSTALLED_APPS = [
     'pwa',
     
     'essiet',
-    'marketing',
     'payments',
     'paypal',
     'users',
@@ -169,9 +168,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Mailchimp API 
-MAILCHIMP_API_KEY = '92ef2aef156b6b5e2cd8e22076f9d21a-us4' 
-MAILCHIMP_DATA_CENTER = 'us4'
-MAILCHIMP_EMAIL_LIST_ID = '6280711s'
+#MAILCHIMP_API_KEY = '92ef2aef156b6b5e2cd8e22076f9d21a-us4' 
+#MAILCHIMP_DATA_CENTER = 'us4'
+#MAILCHIMP_EMAIL_LIST_ID = '6280711s'
 
 
 # Email Settings
@@ -245,3 +244,10 @@ PAYMENT_VARIANTS = {
     )}
 
 
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+SECURE_HSTS_SECONDS = 1
+SECURE_SSL_REDIRECT = True
+SECURE_REFERRER_POLICY = 'same-origin'
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True

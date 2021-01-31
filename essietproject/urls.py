@@ -16,7 +16,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path, re_path
 from essiet import views
-from marketing import views
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -24,7 +23,6 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', include('essiet.urls')),
     path('admin/', admin.site.urls),
-    path('marketing', include('marketing.urls')),
     path('payments/', include('payments.urls')),
     path('paypal', include('paypal.urls')),
     path('pwa', include('pwa.urls')),
