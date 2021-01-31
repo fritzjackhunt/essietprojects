@@ -14,6 +14,11 @@ import os
 import django_heroku
 import dj_database_url
 from decouple import config
+import dj_database_url
+
+
+#db_from_env = dj_database_url.config(conn_max_age=500)
+#DATABASES['default'].update(db_from_env)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,13 +30,20 @@ PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'essietproject/static/js', 'ser
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'Nice try'
+
+with open('essietproject SK.txt') as f:
+    SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
+
+#    server {
+ #       listen 80 default_server;
+  #      return 444;
+   # }
 
 # Application definition
 
@@ -152,6 +164,9 @@ STATIC_ROOT = '/essietprojects/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # Mailchimp API 
 MAILCHIMP_API_KEY = '92ef2aef156b6b5e2cd8e22076f9d21a-us4' 
@@ -165,7 +180,7 @@ EMAIL_HOST = 'localhost'
 EMAIL_PORT = '1025'
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
-EMAIL_USE_TLS = False
+EMAIL_USE_TLS = True
 
 #LOGIN_URL =
 LOGIN_REDIRECT_URL = '/'
@@ -223,8 +238,10 @@ PAYPAL_TEST = True
   #  PAYPAL_WPP_SIGNATURE = "???"
 
 PAYMENT_HOST = 'localhost:8000'
-PAYMENT_USES_SSL = False
+PAYMENT_USES_SSL = True
 PAYMENT_MODEL = 'paymentapp.Payment'
 PAYMENT_VARIANTS = {
     'default': ('payments.dummy.DummyProvider', {}
     )}
+
+
