@@ -35,9 +35,9 @@ with open('essietproject SK.txt') as f:
     SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1:8000"]
+ALLOWED_HOSTS = ['essiet.herokuapp.com', '127.0.0.1', 'localhost']
 
 
 #    server {
@@ -244,6 +244,7 @@ PAYMENT_VARIANTS = {
     )}
 
 
+#Heroku deployment issues
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 SECURE_HSTS_SECONDS = 1
