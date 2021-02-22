@@ -5,8 +5,6 @@ from django.template import loader, context
 from django.shortcuts import render
 import json
 from django.http import HttpResponse, JsonResponse
-from .models import Subscribe
-from .utils import SendSubscribeMail
 from django.core.mail import send_mail
 
 
