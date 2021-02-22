@@ -1,6 +1,6 @@
-import threading
-import mailchimp
-from django.conf import settings
+#import threading
+#import mailchimp
+#from django.conf import settings
 
 # 
 #	class SendSubscribeMail(object):
