@@ -1,6 +1,6 @@
 from django.db import models
 from django.http import HttpResponse, JsonResponse
-from .utils import SendSubscribeMail
+#from .utils import SendSubscribeMail
 from django.utils import timezone
 
 
