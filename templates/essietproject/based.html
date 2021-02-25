@@ -3,36 +3,26 @@
 
 {% block content %}
 
-    <!--CAROUSAL starts-->
-
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-      <ol class="carousel-indicators">
-          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
-          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-          <div class="carousel-item active">
-              <img src="{% static 'pictures/180677.jpg' %}" class="d-block w-100" alt="..." height="550" width="400">
-          </div>
-          <div class="carousel-item">
-              <img src="{% static 'pictures/180687.jpg' %}" class="d-block w-100" alt="..." height="550" width="400">
-          </div>
-          <div class="carousel-item">
-              <img src="{% static 'pictures/180702.jpg' %}" class="d-block w-100" alt="..." height="550" width="400">
-          </div>
+    <!--jumbotron-->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+       <div class="row">
+          <div class="col-lg-6">
+            <h1 class="display-4" id="jumbo-header">The Platform For Clients. The Home Of Freelancers.</h1>
+            <p class="lead">Get the most, at least.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Client</a>
+            <a class="btn btn-light btn-lg" href="#" role="button">Freelancer</a>
+         </div>
+         
+         <div class="row">
+            <div class="col-lg-6">
+              <img src="{% static 'pictures\image6.png' %}" height="400" width="500" alt="Seo">
+            </div>
+         </div>
+        </div>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-      </a>
-  </div>
-
-  <!--CAROUSAL ends-->
+    </div>
+    <!--jumbotron ends-->
 
   <!-- Marketing messaging and featurettes
 ================================================== -->
