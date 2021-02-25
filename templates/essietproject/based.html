@@ -1,0 +1,98 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Essiet, LLC</title>
+
+    <!-- Add additional js in static file -->
+    {% load static %}
+    <link rel="stylesheet" type="application/javascript" href="{% static 'js/client.js' %}">
+    
+    <link rel="stylesheet" type="application/javascript" href="{% static 'js/paypal.js' %}">
+
+    <!-- Add additional CSS in static file -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    
+</head>
+<body>
+
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <a class="navbar-brand" href="{% url 'homepage' %}">essiet</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+      
+        <div class="collapse navbar-collapse bg-transparent" id="navbarNavDropdown">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contacts' %}">Contacts</a>
+            </li>
+         
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Company
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="{% url 'aboutus' %}">About Us</a>
+                    <a class="dropdown-item" href="{% url 'payments' %}">Payments</a>
+                    <a class="dropdown-item" href="{% url 'paypal' %}">Paypal</a>
+                </div>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ml-auto">
+
+          {% if user.is_authenticated %}
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'edit_profile' %}">Edit Profile</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+          </li>
+
+          {% else %}
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'account_login' %}">Sign in</a>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'register' %}">Sign up</a>
+          </li>
+
+          {% endif %}
+
+
+          
+           
+          </ul>
+        </div>
+    </nav>
+
+    <!--navbar ends-->
+    
+{% block content %}
+
+
+{% endblock %}
+
+
+    <!--Footer-->
+    <footer class="page-footer">
+        <div class="container">
+            <p class="pull-right"><a href="#">Privacy Settings</a> &middot; <a href="#">Terms Of Service</a></p></a></p>
+            <p>&copy; 2020 essiet 
+        </div>
+    </footer>
