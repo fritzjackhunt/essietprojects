@@ -19,6 +19,7 @@ django-mailchimp-v1.3==1.4.0
 django-payments==0.13.0
 django-paypal==1.0.0
 django-progressive-web-app==0.1.1
+django-pwa==1.0.10
 docopt==0.4.0
 filelock==3.0.12
 Flask==1.0.3
