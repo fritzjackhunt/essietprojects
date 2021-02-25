@@ -10,7 +10,7 @@ from django.core.mail import send_mail
 
 
 def home(request):
-    return render(request, 'essietproject/home.html')
+    return render(request, 'essietproject/based.html')
 
 def contacts(request):
     if request.method == "POST":
