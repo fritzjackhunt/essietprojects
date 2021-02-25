@@ -21,11 +21,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    path('', include('pwa.urls')),
     path(r'', include('essiet.urls')),
     path('admin/', admin.site.urls),
     path('payments/', include('payments.urls')),
     path('paypal', include('paypal.urls')),
-    path('', include('pwa.urls')),
     path('users', include('django.contrib.auth.urls')),
     path('users', include('users.urls')),
     path('accounts/', include('allauth.urls')),
