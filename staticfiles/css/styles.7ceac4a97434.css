@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+.pull-right {
+    float: right;
+}
+
+#text {
+    margin-top: 70px;
+}
+
+#jumbo-header {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#main-content {
+    flex-wrap: nowrap;
+    flex: 200px;
+    flex-direction: row;
+}
+
+#pix {
+    float: left;
+}
+
