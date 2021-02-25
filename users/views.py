@@ -6,7 +6,7 @@ from .forms import SignUpForm, EditProfileForm
 
 class UserRegisterView(generic.CreateView):
     form_class = SignUpForm
-    template_name = 'registration/registration.html'
+    template_name = 'registration/register.html'
     success_url = reverse_lazy('login')
 
 class UserEditView(generic.UpdateView):
