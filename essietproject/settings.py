@@ -38,7 +38,7 @@ ALLOWED_HOSTS = ['essiet.herokuapp.com', '127.0.0.1', 'localhost']
 
 
 # PWA service worker path
-PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'static/js', 'serviceworker.js').  
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'essiet', 'serviceworker.js').  
 
 
 # Application definition
@@ -50,9 +50,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'essiet',
     'pwa',
     
-    'essiet',
     'payments',
     'paypal',
     'users',
