@@ -18,12 +18,11 @@
 
     <title>Essiet, LLC</title>
 
+    <link type="manifest" href="manifest.json">
 
     <!-- Add additional js in static file -->
     {% load static %}
     <link rel="stylesheet" type="application/javascript" href="{% static 'js/client.js' %}">
-
-    <link type="manifest" href="manifest.json">
     
     <link rel="stylesheet" type="application/javascript" href="{% static 'js/paypal.js' %}">
 
@@ -39,18 +38,26 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="{% url 'homepage' %}">Home</a>
-            <a class="nav-link" href="{% url 'aboutus' %}">About Us</a>
-            <a class="nav-link" href="{% url 'payments' %}">Events</a>
-            <a class="nav-link" href="{% url 'contacts' %}">Contacts</a>
-            <a class="nav-link" href="{% url 'paypal' %}">News</a>
-          </div>
-        
 
         
       
+        <div class="collapse navbar-collapse bg-transparent" id="navbarNavDropdown">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contacts' %}">Contacts</a>
+            </li>
+         
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Company
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="{% url 'aboutus' %}">About Us</a>
+                    <a class="dropdown-item" href="{% url 'payments' %}">Payments</a>
+                    <a class="dropdown-item" href="{% url 'paypal' %}">Paypal</a>
+                </div>
+            </li>
+          </ul>
 
           <ul class="navbar-nav ml-auto">
 

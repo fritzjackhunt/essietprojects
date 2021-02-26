@@ -21,8 +21,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', include('pwa.urls')),
-    path(r'', include('essiet.urls')),
+    path(r'', include('pwa.urls')),
+    path('', include('essiet.urls')),
     path('admin/', admin.site.urls),
     path('payments/', include('payments.urls')),
     path('paypal', include('paypal.urls')),
