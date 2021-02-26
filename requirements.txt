@@ -14,11 +14,9 @@ dj-database-url==0.5.0
 Django==3.0.7
 django-allauth==0.44.0
 django-heroku==0.3.1
-django-mailchimp==0.1.30
 django-mailchimp-v1.3==1.4.0
 django-payments==0.13.0
 django-paypal==1.0.0
-django-progressive-web-app==0.1.1
 django-pwa==1.0.10
 docopt==0.4.0
 filelock==3.0.12

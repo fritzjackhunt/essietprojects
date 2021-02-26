@@ -36,11 +36,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['essiet.herokuapp.com', '127.0.0.1', 'localhost']
 
-
-# PWA service worker path
-PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'essiet', 'serviceworker.js').  
-
-
 # Application definition
 
 INSTALLED_APPS = [
