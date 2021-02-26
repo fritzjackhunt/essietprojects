@@ -18,11 +18,12 @@
 
     <title>Essiet, LLC</title>
 
-    <link type="manifest" href="manifest.json">
 
     <!-- Add additional js in static file -->
     {% load static %}
     <link rel="stylesheet" type="application/javascript" href="{% static 'js/client.js' %}">
+
+    <link type="manifest" href="manifest.json">
     
     <link rel="stylesheet" type="application/javascript" href="{% static 'js/paypal.js' %}">
 
@@ -42,9 +43,9 @@
           <div class="navbar-nav">
             <a class="nav-link active" aria-current="page" href="{% url 'homepage' %}">Home</a>
             <a class="nav-link" href="{% url 'aboutus' %}">About Us</a>
-            <a class="nav-link" href="{% url 'events' %}">Events</a>
+            <a class="nav-link" href="{% url 'payments' %}">Events</a>
             <a class="nav-link" href="{% url 'contacts' %}">Contacts</a>
-            <a class="nav-link" href="{% url 'news' %}">News</a>
+            <a class="nav-link" href="{% url 'paypal' %}">News</a>
           </div>
         </div>
 
