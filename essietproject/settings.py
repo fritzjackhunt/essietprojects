@@ -37,10 +37,9 @@ DEBUG = True
 ALLOWED_HOSTS = ['essiet.herokuapp.com', '127.0.0.1', 'localhost']
 
 
-#    server {
- #       listen 80 default_server;
-  #      return 444;
-   # }
+# PWA service worker path
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'static/js', 'serviceworker.js').  
+
 
 # Application definition
 
@@ -256,7 +255,7 @@ PWA_APP_BACKGROUND_COLOR = '#ffffff'
 PWA_APP_DISPLAY = 'standalone'
 PWA_APP_SCOPE = '/'
 PWA_APP_ORIENTATION = 'any'
-PWA_APP_START_URL = '/templates/essietproject/based.html'
+PWA_APP_START_URL = '/'
 PWA_APP_STATUS_BAR_COLOR = 'default'
 PWA_APP_ICONS = [
 	{
