@@ -62,33 +62,31 @@
             <a class="nav-link" href="{% url 'paypal' %}">Paypal</a>
           </li>
         </ul>
-      </div>
+      
           
-          <ul class="navbar-nav me-auto">
+      <ul class="navbar-nav ms-auto">
 
-            {% if user.is_authenticated %}
-  
-            <li class="nav-item  pull-right">
-              <a class="nav-link" href="{% url 'edit_profile' %}">Edit Profile</a>
-            </li>
-  
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-            </li>
-  
-            {% else %}
-  
-            <li class="nav-item pull-right">
-              <a class="nav-link" href="{% url 'account_login' %}">Sign in</a>
-            <li class="nav-item">
-              <a class="nav-link justify-content-end" href="{% url 'register' %}">Sign up</a>
-            </li>
-  
-            {% endif %}
+        {% if user.is_authenticated %}
 
-          </ul>
-        </ul>
-      </div>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'edit_profile' %}">Edit Profile</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+        </li>
+
+        {% else %}
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'account_login' %}">Sign in</a>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'register' %}">Sign up</a>
+        </li>
+
+        {% endif %}
+
+      </ul>
     </div>
   </nav>
   
