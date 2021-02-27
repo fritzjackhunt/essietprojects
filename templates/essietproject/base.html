@@ -41,10 +41,10 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="{% url 'homepage' %}">essiet</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler pull-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{% url 'homepage' %}">Home</a>
@@ -61,12 +61,14 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'paypal' %}">Paypal</a>
           </li>
+        </ul>
+      </div>
           
-          <ul class="navbar-nav">
+          <ul class="navbar-nav me-auto">
 
             {% if user.is_authenticated %}
   
-            <li class="nav-item">
+            <li class="nav-item  pull-right">
               <a class="nav-link" href="{% url 'edit_profile' %}">Edit Profile</a>
             </li>
   
@@ -76,10 +78,10 @@
   
             {% else %}
   
-            <li class="nav-item">
+            <li class="nav-item pull-right">
               <a class="nav-link" href="{% url 'account_login' %}">Sign in</a>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'register' %}">Sign up</a>
+              <a class="nav-link justify-content-end" href="{% url 'register' %}">Sign up</a>
             </li>
   
             {% endif %}
@@ -98,10 +100,54 @@
 {% endblock %}
 
 
-    <!--Footer-->
-    <footer class="page-footer">
-        <div class="container">
-            <p class="pull-right"><a href="#">Privacy Settings</a> &middot; <a href="#">Terms Of Service</a></p></a></p>
-            <p>&copy; 2020 essiet 
+    <!--FOOTER starts-->
+
+    <footer class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md">
+          <img src="{% static 'pictures/on_off.jpg' %}" alt="" width="50" height="50">
+          <small class="d-block mb-3 text-muted">&copy; 2019–2021</small>
         </div>
+        <div class="col-6 col-md">
+          <h5>Features</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="link-secondary" href="#">Cool stuff</a></li>
+            <li><a class="link-secondary" href="#">Random feature</a></li>
+            <li><a class="link-secondary" href="#">Team feature</a></li>
+            <li><a class="link-secondary" href="#">Stuff for developers</a></li>
+            <li><a class="link-secondary" href="#">Another one</a></li>
+            <li><a class="link-secondary" href="#">Last time</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="link-secondary" href="#">Resource name</a></li>
+            <li><a class="link-secondary" href="#">Resource</a></li>
+            <li><a class="link-secondary" href="#">Another resource</a></li>
+            <li><a class="link-secondary" href="#">Final resource</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="link-secondary" href="#">Business</a></li>
+            <li><a class="link-secondary" href="#">Education</a></li>
+            <li><a class="link-secondary" href="#">Government</a></li>
+            <li><a class="link-secondary" href="#">Gaming</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="link-secondary" href="#">Team</a></li>
+            <li><a class="link-secondary" href="#">Locations</a></li>
+            <li><a class="link-secondary" href="#">Privacy</a></li>
+            <li><a class="link-secondary" href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
+
+    <!--FOOTER ends-->
+    
