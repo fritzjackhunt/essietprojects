@@ -233,7 +233,7 @@ PAYMENT_VARIANTS = {
     )}
 
 
-#Heroku deployment issues
+# Heroku deployment issues
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 SECURE_HSTS_SECONDS = 1

@@ -24,7 +24,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pwa.urls')),
     path('', include('essiet.urls')),
-    path('admin/', admin.site.urls),
     path('payments/', include('payments.urls')),
     path('paypal', include('paypal.urls')),
     path('users', include('django.contrib.auth.urls')),
