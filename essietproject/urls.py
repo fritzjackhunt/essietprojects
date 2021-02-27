@@ -22,8 +22,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path(r'', include('essiet.urls')),
     path('', include('pwa.urls')),
-    path('', include('essiet.urls')),
     path('payments/', include('payments.urls')),
     path('paypal', include('paypal.urls')),
     path('users', include('django.contrib.auth.urls')),
@@ -31,4 +31,4 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('paymentapp/', include('paymentapp.urls')),
 
-] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+] #+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
