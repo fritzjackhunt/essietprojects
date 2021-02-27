@@ -21,22 +21,15 @@
 
     <title>Essiet, LLC</title>
 
-  
+    <link type="manifest" href="manifest.json">
 
     <!-- Add additional js in static file -->
     {% load static %}
+    <link rel="stylesheet" type="application/javascript" href="{% static 'js/client.js' %}">
 
-     <!-- Path to manifest.json -->
-    <link rel="manifest" href="/manifest.json">
-
+    <link rel="manifest" href="manifest.json">
     
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Essiet">
-    
-    
-    <!-- Chrome for Android theme color -->
-    <meta name="theme-color" content="#000000">
-    
+    <link rel="stylesheet" type="application/javascript" href="{% static 'js/paypal.js' %}">
 
     <!-- Add additional CSS in static file -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
