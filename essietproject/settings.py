@@ -254,7 +254,7 @@ PWA_APP_START_URL = '/'
 PWA_APP_STATUS_BAR_COLOR = 'default'
 PWA_APP_ICONS = [
 	{
-		'src': 'static/pictures/on_off.png',
+		'src': 'static/pictures/onj.png',
 		'sizes': '160x160'
 	}
 ]
