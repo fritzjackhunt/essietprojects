@@ -12,7 +12,25 @@
         <button class="btn btn-secondary">Submit</button>
         
     </form>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <p>Or sign up here</p>
+                <a class="btn btn-primary btn-md" href="{% url 'register' %}" role="button">Signup</a>
+            </div>
+
+            <div class="col-6">
+                <p>If you lost your password, you can reset it here</p>
+                <a class="btn btn-primary btn-md" href="{% url 'password_reset' %}" role="button">Reset password</a>
+            </div>
+        </div>
+    </div>
+
+
 </div>
+
+
 
 
 

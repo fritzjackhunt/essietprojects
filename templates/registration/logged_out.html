@@ -3,6 +3,7 @@
 
 
 {% block content %}
-  <p>Logged out!</p>
-  <a href="{% url 'login'%}">Click here to login again.</a>
+  <p>You've logged out succesfully!</p>
+  <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Click here to login again or with a different account.</a>
+  <a class="btn btn-primary btn-lg" href="{% url 'homepage' %}" role="button">Go back to homepage</a>
 {% endblock %}
