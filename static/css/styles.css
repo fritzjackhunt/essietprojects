@@ -64,6 +64,11 @@
     float: left;
 }
 
+#mained {
+    height: 100%;
+    align-items: center;
+}
+
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
     #maps {
