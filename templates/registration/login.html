@@ -2,37 +2,34 @@
 {% load static %}
 {% block content %}
 
-<h1>Welcome to the login page.</h1>
+<body class="text-center"></body>
+<h1>Welcome To The Login Page.</h1>
+<main class="form-signin">
+    <div class="form-group">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p}}
+            <button class="btn btn-secondary">Submit</button>
+            
+        </form>
 
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <p>Or sign up here</p>
+                    <a class="btn btn-primary btn-md" href="{% url 'register' %}" role="button">Signup</a>
+                </div>
 
-<div class="form-group">
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p}}
-        <button class="btn btn-secondary">Submit</button>
-        
-    </form>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-6">
-                <p>Or sign up here</p>
-                <a class="btn btn-primary btn-md" href="{% url 'register' %}" role="button">Signup</a>
-            </div>
-
-            <div class="col-6">
-                <p>If you lost your password, you can reset it here</p>
-                <a class="btn btn-primary btn-md" href="{% url 'password_reset' %}" role="button">Reset password</a>
+                <div class="col-6">
+                    <p>If you lost your password, you can reset it here</p>
+                    <a class="btn btn-primary btn-md" href="{% url 'password_reset' %}" role="button">Reset password</a>
+                </div>
             </div>
         </div>
     </div>
 
 
-</div>
-
-
-
-
+</main>
 
 
 {% endblock %}
