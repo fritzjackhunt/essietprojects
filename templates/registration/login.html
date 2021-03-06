@@ -42,8 +42,8 @@
 <body>
 
     <main class="form-signin text-center" id="mained">
-        <h1>Welcome To The Login Page.</h1>
         <div class="form-group">
+            <h1>Welcome To The Login Page.</h1>
             <form method="POST">
                 {% csrf_token %}
                 {{ form.as_p}}
