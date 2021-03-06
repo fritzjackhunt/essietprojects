@@ -41,32 +41,29 @@
 </head>
 <body>
 
-    <main class="form-signin text-center" id="mained">
-        <div class="form-group">
-            <h1>Welcome To The Login Page.</h1>
-            <form method="POST">
-                {% csrf_token %}
-                {{ form.as_p}}
-                <button class="btn btn-secondary">Submit</button>
-                
-            </form>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-6">
-                        <p>Or sign up here</p>
-                        <a class="btn btn-primary btn-md" href="{% url 'register' %}" role="button">Signup</a>
-                    </div>
-
-                    <div class="col-6">
-                        <p>If you lost your password, you can reset it here</p>
-                        <a class="btn btn-primary btn-md" href="{% url 'password_reset' %}" role="button">Reset password</a>
+    <main>
+        <div class=" text-center position-absolute top-50 start-50 translate-middle">
+            <div class="form-group">
+                <h1>Welcome To The Login Page.</h1>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p}}
+                    <button class="btn btn-secondary">Submit</button>
+                </form>
+    
+                <div class="container " id="signs">
+                    <div class="row">
+                        <div class="col-6">
+                            <a class="btn btn-primary btn-md" href="{% url 'register' %}" role="button">Signup</a>
+                        </div>
+    
+                        <div class="col-6">
+                            <a class="btn btn-primary btn-md" href="{% url 'password_reset' %}" role="button">Reset password</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </main>
 </body>
 
