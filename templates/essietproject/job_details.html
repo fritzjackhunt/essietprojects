@@ -1,0 +1,17 @@
+{% extends 'essietproject/base.html' %}
+{% load static %}
+
+{% block title %}{{ job.title }}{% endblock %}
+
+{% block content %}
+
+<h1>{{ job.title }}</h1>
+<small>By: {{ job.author.first_name }} {{ job.author.last_name }} | <span> <a href="{% url 'job-edit' job.pk %}">Edit</a></span> | <span> <a href="{% url 'job-delete' job.pk %}">Delete</a></span> </small> <br>
+<hr>
+{{ job.description }}
+
+<br><br>
+<a href="{% url 'homepage' %}" class="btn btn-dark">Back</a>
+
+{% endblock %}
+

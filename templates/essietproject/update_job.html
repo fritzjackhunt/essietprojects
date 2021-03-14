@@ -1,0 +1,19 @@
+{% extends 'essietproject/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>Edit your job here</h1>
+<hr>
+<br>
+
+<div class="mb-3">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-dark">Update</button>
+    </form>
+</div>
+
+
+{% endblock %}
